@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Duplicate File Detector</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>🔍 Duplicate File Detector</h1>
+            <p>Find and manage duplicate files easily</p>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Scan Section -->
+        <section class="scan-box">
+
+            <h2>Scan Folder</h2>
+
+            <p>
+                Enter the complete folder path you want to scan.
+            </p>
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    id="folderPath"
+                    placeholder="Example: C:\Users\vikas\duplicate-file-detector\test_files"
+                >
+
+                <button onclick="scanFolder()">
+                    🔍 Scan
+                </button>
+
+            </div>
+
+            <p id="message"></p>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3 id="totalFiles">0</h3>
+                <p>Total Files</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="duplicateFiles">0</h3>
+                <p>Duplicate Files</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="duplicateGroups">0</h3>
+                <p>Duplicate Groups</p>
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="results">
+
+            <h2>Duplicate Files</h2>
+
+            <div id="resultsContainer">
+
+                <div class="empty">
+                    <p>🔎 No scan performed yet.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Duplicate File Detector | Built with HTML, CSS, JavaScript & Node.js
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<button
+    class="choose-btn"
+    onclick="chooseFolder()">
+    📁 Choose Folder
+</button>
